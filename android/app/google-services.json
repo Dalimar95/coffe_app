@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "85341109721",
+    "firebase_url": "https://coffe-app-95dc2.firebaseio.com",
+    "project_id": "coffe-app-95dc2",
+    "storage_bucket": "coffe-app-95dc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85341109721:android:4cd42b527f04094a55adc8",
+        "android_client_info": {
+          "package_name": "com.robokam.coffe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85341109721-mkibo75aa14hl8086qhlsek8ssr48n89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDioAW1t3oxVh_nOi7R-QgqvxvO161s4xQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85341109721-mkibo75aa14hl8086qhlsek8ssr48n89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
