@@ -1,35 +1,37 @@
 import 'package:coffe_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
 
   final Function toggleView;
-  SignIn({this.toggleView});
+
+  Register({this.toggleView});
+
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
 
 final AuthService _auth = AuthService();
-
 String email = '';
 String password = '';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(backgroundColor: Colors.brown[400],
       elevation: 0.0,
-      title: Text('Sign in to coffe app'),
+      title: Text('Sign up in to coffe app'),
       actions: <Widget>[
         FlatButton.icon(
           icon: Icon(Icons.person),
-          label: Text('Register'),
+          label: Text('Sign in'),
           onPressed: (){
             widget.toggleView();
+
           },
           )
       ],
@@ -59,7 +61,7 @@ String password = '';
 
           },
           color: Colors.pink[400],
-          child: Text('sign in',
+          child: Text('Register',
           style: TextStyle(color: Colors.white),
           ),
           )
