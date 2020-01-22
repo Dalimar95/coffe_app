@@ -33,9 +33,18 @@ return _userFromFirebaseUser(user);
 print(e.toString());
 return null;
 }
-
-
 }
+
+// sign out annon
+Future signOutAnon() async {
+try{
+return await _auth.signOut();
+}catch(e){
+print(e.toString());
+return null;
+}
+
+} 
 
 
 //sign in with email & password
