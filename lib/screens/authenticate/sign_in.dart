@@ -10,12 +10,14 @@ class SignIn extends StatefulWidget {
   _SignInState createState() => _SignInState();
 }
 
+final _formKey = GlobalKey<FormState>();
 class _SignInState extends State<SignIn> {
 
 final AuthService _auth = AuthService();
 
 String email = '';
 String password = '';
+String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +38,18 @@ String password = '';
       ),
       body: Container(padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 50.0),
       child: Form(
+        key: _formKey,
         child: Column(children: <Widget>[
           SizedBox(height: 20.0),
           TextFormField(
+            validator: (val)=>val.isEmpty?"enter your email":null,
             onChanged: (val){
               setState(()=>email = val);
             },
           ),
           SizedBox(height: 20.0),
           TextFormField(
+            validator: (val)=>val.isEmpty?"enter your password":null,
             obscureText: true,
             onChanged: (val){
               setState(()=>password = val);
@@ -54,8 +59,17 @@ String password = '';
           ),
           SizedBox(height: 20.0),
           RaisedButton(onPressed: ()async{
-            print(email);
-            print(password);
+            if(_formKey.currentState.validate()){
+              dynamic result = await _auth.signInWithEmailAndPassword(email,password);
+              if(result == null){
+                setState(()=>error = ' authentication error');
+              }
+            } 
+            else {
+
+
+            }
+
 
           },
           color: Colors.pink[400],
