@@ -13,7 +13,7 @@ class _UserListState extends State<UserList> {
   @override
   Widget build(BuildContext context) {
 
-    final users = Provider.of<List<UserData>>(context);
+    final users = Provider.of<List<UserData>>(context)??[];
    // print (users.documents);
 
    users.forEach((user){

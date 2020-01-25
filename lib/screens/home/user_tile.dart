@@ -14,8 +14,10 @@ class UserTile extends StatelessWidget {
       child: Card(
         margin: EdgeInsets.fromLTRB(20.0, 6.0, 20.0, 0),
         child: ListTile(
-          leading: CircleAvatar(backgroundColor: Colors.brown[user.strength],
-          radius: 25.0
+          leading: CircleAvatar(
+            backgroundColor: Colors.brown[user.strength],
+            backgroundImage: AssetImage('assets/coffee_icon.png'),
+            radius: 25.0
           ),
           title: Text(user.name),
           subtitle: Text('Takes${user.sugars} sugar(s)'),
